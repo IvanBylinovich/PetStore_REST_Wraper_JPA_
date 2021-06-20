@@ -1,0 +1,119 @@
+POST  http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "name": "ivavvq",
+  "password": "22212",
+  "username": "121112",
+  "address": {
+      "home": 37,
+      "street": "rainisa7"
+    }
+}
+
+###
+GET  http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+  "id": 1,
+  "key": "51bb134b-eaaf-4970-b15a-ff431cb477d7",
+  "user": {
+    "id": 4,
+    "name": "ivavvq",
+    "username": "121112",
+    "password": "22212",
+    "address": {
+      "id": 4,
+      "street": "rainisa7",
+      "home": 37
+    }
+  }
+}
+
+###
+
+GET  http://localhost:8080/user/logout
+Content-Type: application/json
+
+{
+  "id": 1,
+  "key": "51bb134b-eaaf-4970-b15a-ff431cb477d7",
+  "user": {
+    "id": 4,
+    "name": "ivavvq",
+    "username": "121112",
+    "password": "22212",
+    "address": {
+      "id": 4,
+      "street": "rainisa7",
+      "home": 37
+    }
+  }
+}
+
+###
+
+
+POST  http://localhost:8080/user/saveUsers
+Content-Type: application/json
+
+[
+{
+  "name": "qwe",
+  "password": "qwe",
+  "username": "206",
+  "address":
+    {
+      "home": 3,
+      "street": "string"
+    }
+},
+
+  {
+    "name": "qwe",
+    "password": "qwe",
+    "username": "10",
+    "address":
+      {
+        "home": 3,
+        "street": "string"
+      }
+  },
+  {
+    "name": "ivavvq",
+    "password": "2222",
+    "username": "12",
+    "address": {
+      "home": 37,
+      "street": "rainisa7"
+    }
+  }
+]
+
+###
+
+
+DELETE  http://localhost:8080/user?username=12
+
+###
+
+GET  http://localhost:8080/user?username=1211
+
+###
+
+PUT  http://localhost:8080/user
+Content-Type: application/json
+
+{
+  "name": "Ivan",
+  "password": "0000",
+  "username": "1211",
+  "address": {
+    "home": 37,
+    "street": "rainisa7"
+  }
+}
+
+###
+

@@ -1,0 +1,24 @@
+POST http://localhost:8080/pet
+Content-Type: application/json
+
+{
+  "category":
+  {
+     "name": "name"
+  },
+  "name": "kitpas",
+  "tags":
+   [
+     {"name": "losi"},
+     {"name": "olany"},
+     {"name": "korinnia"}
+   ],
+  "status": "SOLD"
+}
+
+###
+GET http://localhost:8080/pet?id=1
+Content-Type: application/json
+
+
+###
