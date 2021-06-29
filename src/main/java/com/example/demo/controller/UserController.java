@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 
@@ -88,7 +89,7 @@ public class UserController {
     }
 
     @PutMapping
-    public ResponseEntity<?> UpDate (@RequestBody User user){
+    public ResponseEntity<?> UpDate (@Valid @RequestBody User user){
         try {
             userService.upUsersDate(user);
             return new ResponseEntity<>(HttpStatus.ACCEPTED);

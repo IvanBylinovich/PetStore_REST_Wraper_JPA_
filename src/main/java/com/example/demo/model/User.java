@@ -1,7 +1,11 @@
 package com.example.demo.model;
 
 
+import org.hibernate.annotations.BatchSize;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
@@ -10,8 +14,11 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @NotBlank
     private String name;
+    @NotBlank
     private String username;
+    @Size(min =8)
     private String password;
     @OneToOne
     private Address address;
